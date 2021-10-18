@@ -1,0 +1,10 @@
+
+    <!-- <div [ngStyle]="{height:height+'px',width:width+'px'}" *ngIf="isLoading" class="loading">
+        <img [src]="loader http://localhost:9898/images/file?imageName=ewqe" />
+    </div> -->
+    
+    <div class="contenido" style="width: 100%;height: 260px; overflow: hidden;">
+    <ngx-skeleton-loader *ngIf="isLoading" appearance="line" [theme]="{height: '250px'}"></ngx-skeleton-loader>    
+    <img style="height: 250px;" [ngStyle]="{visibility:isLoading?'hidden':''}" (load)="hideLoader()"
+     (error)="hideLoader()" class="card-img-top" [src]="image" alt="Card image cap">
+    </div>

@@ -1,0 +1,21 @@
+
+    <!-- Section: Images -->
+    <section class="">
+      <div class="row">
+        <div style="margin-bottom: 15px !important;" *ngFor="let img of lista" class="col-lg-4 col-md-12 mb-40 mb-lg-0">
+            <div class="card" style="width: 18rem;">
+                <!-- <img class="card-img-top" [URL]="img.image"  src="http://localhost:9898/images/file?imageName=ewqe" alt="Card image cap">
+                <ngx-skeleton-loader http://localhost:9898/images/file?imageName=ewqe  appearance="line" [theme]="{height: '250px'}"></ngx-skeleton-loader>  -->
+                <app-image-loading  [image]="img.image" ></app-image-loading>
+                <div class="card-body">
+                  <h5 class="card-title">{{img.name}}</h5>
+                  <p class="card-text">{{img.descripcion}}</p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+              </div>
+        </div>
+
+
+      </div>
+  </section>
+    <!-- Section: Images -->
